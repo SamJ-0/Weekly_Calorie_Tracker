@@ -1,4 +1,4 @@
-# Weekly Calorie Tracker (Browser Extension / Web App)
+# Weekly Calorie Tracker (Browser Extension)
 
 A lightweight firefox extension built with JavaScript that tracks daily calorie intake and calculates weekly averages, using localStorage for persistence. The app displays weekly summaries including total intake, average daily calories and compares against a weekly goal.
 
