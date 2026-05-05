@@ -36,5 +36,3 @@ Designed as a small data-driven frontend project focusing on DOM manipulation, s
 - Improve date handling robustness
 - Add charts or visualisation of trends
 - More visual form feedback on submission etc
-
----
