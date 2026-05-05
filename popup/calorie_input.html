@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calorie_input.css">
+    <link rel="icon" type="image/x-icon" href="/icons/pie-chart-32.png">
+<title>Calorie Average</title>
+</head>
+<body>
+    <div class="popup-content">
+        <h1>Weekly Calorie Average</h1>
+        <form>
+            <div class="input-row">
+            <label for="calorie-input">Today's calories:</label>
+                <input type="number" name="calorie-input" id="calorie-input" step="1" min="1" max="20000" placeholder="E.g. 1650" required>
+            </div>
+                <button type="submit" id="save-btn">Save</button>
+        </form>
+
+        <section id="average-content">
+                <h2>Week for dates:</h2>
+                <p class="date-range"></p>
+
+                <dl class="calorie-data">
+                    <div class="calorie-row" id="weeklyOverUnder">
+                        <dt>Calories over / under weekly goal:</dt>
+                        <dd id="weekly-calories">0</dd>
+                    </div>
+                    
+                    <div class="calorie-row" id="dailyAverage">
+                        <dt>Daily average:</dt>
+                        <dd>0</dd>
+                    </div>
+                    
+                    <div class="calorie-row">
+                        <dt>Daily goal:</dt>
+                        <dd id="daily-goal">1,700</dd>
+                    </div>
+                </dl>
+
+        </section>
+    </div>
+    <script type="module" src="calorie_input.js"></script>
+</body>
+</html>
