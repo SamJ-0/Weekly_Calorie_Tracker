@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="calorie_input.css">
     <link rel="icon" type="image/x-icon" href="/icons/pie-chart-32.png">
-<title>Calorie Average</title>
+<title>Weekly Calorie Tracker</title>
 </head>
 <body>
     <div class="popup-content">
-        <h1>Weekly Calorie Average</h1>
+        <div class="tab-container">
+            
+            <ul class="tabs">
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#last-entries">View entries</a></li>
+            </ul>
+        </div>
+        <h1>Weekly Calorie Tracker</h1>
+        <div class="tab-panels">
+        <div id="overview" class="active-panel">
         <form>
             <div class="input-row">
             <label for="calorie-input">Today's calories:</label>
@@ -37,9 +46,33 @@
                         <dd id="daily-goal">1,700</dd>
                     </div>
                 </dl>
-
         </section>
-    </div>
+
+        </div>
+
+        <div id="last-entries">
+                    <section id="daily-entries">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Calories</th>
+                </tr>
+                <tr class="table-rows">
+                    <td>13/05/2026</td>
+                    <td class="calories">1,693</td>
+                    <td><button class="dots-btn"><img src="../icons/dots.svg" alt="dots-menu"></button></td>
+                </tr>
+
+                <tr class="table-rows">
+                    <td>14/05/2026</td>
+                    <td class="calories">1,565</td>
+                    <td><button class="dots-btn"><img src="../icons/dots.svg" alt="dots-menu"></button></td>
+                </tr>
+                
+            </table>
+        </section>
+        </div>
+        </div>
     <script src="calorie_input.js"></script>
 </body>
 </html>
