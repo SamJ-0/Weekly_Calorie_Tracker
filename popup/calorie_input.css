@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+    --main-orange: #e74c3c;
+    --hover-orange:  #f85341;
+    --border-colour-light: #c9c9c9;
+    --light-gray: #e1e1e1;
+    --dark-gray: rgb(93, 95, 96);
+    --text-gray: rgb(50, 52, 52);
+    --item-background: #f1f1f1; 
+    --border-radius: 6px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +19,7 @@
 
 html,
 body {
+    color: var(--text-gray);
     width: 360px;
     font-family: "Inter", sans-serif;
 }
@@ -38,29 +50,29 @@ form {
 #save-btn,
 input[type=number] {
     font-size: 1rem;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
 }
 
 input[type=number] {
     padding: 0.6rem;
-    border: 2px solid #c9c9c9;
+    border: 2px solid var(--border-colour-light);
 }
 
 input[type=number]:focus {
-    border: 2px solid rgb(93, 95, 96);
+    border: 2px solid var(--dark-gray);
     outline: none;
 }
 
 #save-btn {
     color: #fff;
     border: none;
-    background-color: #e74c3c;
+    background-color: var(--main-orange);
     padding: 0.65rem 1rem;
     cursor: pointer;
 }
 
 #save-btn:hover {
-    background-color: #f85341;
+    background-color: var(--hover-orange);
 }
 
 h2,
@@ -73,10 +85,6 @@ h2 {
     margin-bottom: 0.25rem;
 }
 
-.hidden {
-    display: none;
-}
-
 .date-range {
     margin-bottom: 1.25rem;
 }
@@ -85,37 +93,52 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 1.75rem;
-    background-color: #f0f0f0;
+    background-color: var(--item-background);
     padding: 0.7rem;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     margin: 0.4rem 0;
 }
 
 /* tabs */ 
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 1.25rem;
+    padding: 0.6rem;
+    font-size: 0.95rem;
+}
 
 li {
     list-style: none;
 }
 
 a {
-    color: rgb(93, 95, 96);
+    color: var(--text-gray);
     text-decoration: none;
 }
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+a:hover {
     padding: 0.6rem;
-    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--item-background);
 }
 
 .active {
-    /* color: rgb(58, 60, 61); */
-    text-decoration-color: #e74c3c;
+    text-decoration-color: var(--main-orange);
     text-decoration-line: underline;
-    text-decoration-thickness: 0.2rem;
+    text-decoration-thickness: 0.15rem;
     text-underline-offset: 0.5rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-panel {
+    display: block;
 }
 
 /* Daily entries section */
@@ -126,13 +149,16 @@ table {
 }
 
 th, td {
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: left;
 }
 
-tr {
+td:last-child {
     position: relative;
-    border-bottom: 1px solid #e1e1e1;
+}
+
+tr {
+    border-bottom: 1px solid var(--light-gray);
 }
 
 .calories {
@@ -146,14 +172,49 @@ button img {
 .dots-btn {
     border: none;
     padding: 0.5rem;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     background-color: transparent;
     cursor: pointer;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 6px;
 }
 
 .dots-btn:hover {
-    background-color: #f0f0f0;
+    background-color: var(--item-background);
+}
+
+.actions-menu {
+    position: relative;
+}
+
+.inner-menu {
+    position: absolute;
+    top: 75%;
+    right: 60%;
+
+    display: none;
+
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    filter: drop-shadow(0 3px 0.2rem var(--light-gray));
+    z-index: 2;
+}
+
+.inner-menu.active-menu {
+    display: block;
+}
+
+.inner-menu button {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.inner-menu button:hover {
+    background-color: var(--light-gray);
 }

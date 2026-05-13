@@ -1,78 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="calorie_input.css">
-    <link rel="icon" type="image/x-icon" href="/icons/pie-chart-32.png">
-<title>Weekly Calorie Tracker</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="calorie_input.css" />
+    <link rel="icon" type="image/x-icon" href="/icons/pie-chart-32.png" />
+    <title>Weekly Calorie Tracker</title>
+  </head>
+  <body>
     <div class="popup-content">
-        <div class="tab-container">
-            
-            <ul class="tabs">
-                <li><a href="#overview" class="active">Overview</a></li>
-                <li><a href="#last-entries">View entries</a></li>
-            </ul>
-        </div>
+      <div class="tab-container">
         <h1>Weekly Calorie Tracker</h1>
-        <div class="tab-panels">
-        <div id="overview" class="active-panel">
-        <form>
+        <ul class="tabs">
+          <li><a href="#overview" class="active">Overview</a></li>
+          <li><a href="#last-entries">View entries</a></li>
+        </ul>
+      </div>
+      <div class="tab-panels">
+        <div id="overview" class="tab-content active-panel">
+          <form>
             <div class="input-row">
-            <label for="calorie-input">Today's calories:</label>
-                <input type="number" name="calorie-input" id="calorie-input" step="1" min="1" max="20000" placeholder="E.g. 1650" required>
+              <label for="calorie-input">Today's calories:</label>
+              <input
+                type="number"
+                name="calorie-input"
+                id="calorie-input"
+                step="1"
+                min="1"
+                max="20000"
+                placeholder="E.g. 1650"
+                required
+              />
             </div>
-                <button type="submit" id="save-btn">Save</button>
-        </form>
+            <button type="submit" id="save-btn">Save</button>
+          </form>
 
-        <section id="average-content">
-                <h2>Week for dates:</h2>
-                <p class="date-range"></p>
-
-                <dl class="calorie-data">
-                    <div class="calorie-row" id="weeklyOverUnder">
-                        <dt>Calories over / under weekly goal:</dt>
-                        <dd id="weekly-calories">0</dd>
-                    </div>
-                    
-                    <div class="calorie-row" id="dailyAverage">
-                        <dt>Daily average:</dt>
-                        <dd>0</dd>
-                    </div>
-                    
-                    <div class="calorie-row">
-                        <dt>Daily goal:</dt>
-                        <dd id="daily-goal">1,700</dd>
-                    </div>
-                </dl>
-        </section>
-
+          <section id="average-content">
+            <h2>Week for dates:</h2>
+            <p class="date-range"></p>
+            <dl class="calorie-data">
+              <div class="calorie-row" id="weeklyOverUnder">
+                <dt>Calories over / under weekly goal:</dt>
+                <dd id="weekly-calories">0</dd>
+              </div>
+              <div class="calorie-row" id="dailyAverage">
+                <dt>Daily average:</dt>
+                <dd>0</dd>
+              </div>
+              <div class="calorie-row">
+                <dt>Daily goal:</dt>
+                <dd id="daily-goal">1,700</dd>
+              </div>
+            </dl>
+          </section>
         </div>
 
-        <div id="last-entries">
-                    <section id="daily-entries">
+        <div id="last-entries" class="tab-content">
+          <section id="daily-entries">
             <table>
+              <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Calories</th>
+                  <th>Date</th>
+                  <th>Calories</th>
+                  <th></th>
                 </tr>
+              </thead>
+              <tbody>
                 <tr class="table-rows">
-                    <td>13/05/2026</td>
-                    <td class="calories">1,693</td>
-                    <td><button class="dots-btn"><img src="../icons/dots.svg" alt="dots-menu"></button></td>
-                </tr>
+                  <td>13/05/2026</td>
+                  <td class="calories">1,693</td>
+                  <td class="actions-menu">
+                    <button class="dots-btn">
+                      <img src="../icons/dots.svg" alt="dots-btn" />
+                    </button>
 
-                <tr class="table-rows">
-                    <td>14/05/2026</td>
-                    <td class="calories">1,565</td>
-                    <td><button class="dots-btn"><img src="../icons/dots.svg" alt="dots-menu"></button></td>
+                    <div class="inner-menu">
+                      <button>Edit</button>
+                      <button>Delete</button>
+                    </div>
+                  </td>
                 </tr>
-                
+              </tbody>
             </table>
-        </section>
+          </section>
         </div>
-        </div>
+      </div>
+    </div>
     <script src="calorie_input.js"></script>
-</body>
+  </body>
 </html>
