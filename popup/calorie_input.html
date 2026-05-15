@@ -16,7 +16,7 @@
         </ul>
       </div>
       <div class="tab-panels">
-        <div id="overview" class="tab-content active-panel">
+        <div id="overview" class="tab-content">
           <form>
             <div class="input-row">
               <label for="calorie-input">Today's calories:</label>
@@ -54,7 +54,7 @@
           </section>
         </div>
 
-        <div id="last-entries" class="tab-content">
+        <div id="last-entries" class="tab-content active-panel">
           <section id="daily-entries">
             <table>
               <thead>
@@ -66,11 +66,21 @@
               </thead>
               <tbody>
                 <tr class="table-rows">
-                  <td>13/05/2026</td>
+                  <td>14/05/2026</td>
                   <td class="calories">1,693</td>
                   <td class="actions-menu">
-                    <button class="options-btn">
-                      <img src="../icons/dots.svg" alt="options-btn" />
+                    <button class="more-options-btn">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#1f1f1f"
+                      >
+                        <path
+                          d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"
+                        />
+                      </svg>
                     </button>
 
                     <div class="inner-menu">
