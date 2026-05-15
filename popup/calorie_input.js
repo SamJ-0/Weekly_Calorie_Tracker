@@ -116,7 +116,11 @@ function calorieInput() {
 }
 
 function sumCalories(value) {
-  return value.reduce((acc, val) => acc + val);
+  if (value.length > 0) {
+    return value.reduce((acc, val) => acc + val);
+  } else {
+    return 0;
+  }
 }
 
 function filterDates(dates, dateRange) {
