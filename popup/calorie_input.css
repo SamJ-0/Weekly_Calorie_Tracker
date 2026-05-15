@@ -169,7 +169,7 @@ button img {
     height: 0.8rem;
 }
 
-.dots-btn {
+.options-btn {
     border: none;
     padding: 0.5rem;
     border-radius: var(--border-radius);
@@ -180,7 +180,7 @@ button img {
     top: 6px;
 }
 
-.dots-btn:hover {
+.options-btn:hover {
     background-color: var(--item-background);
 }
 
@@ -213,6 +213,17 @@ button img {
     background-color: transparent;
     cursor: pointer;
     text-align: left;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.options svg {
+    height: 18px;
+    width: 18px;
 }
 
 .inner-menu button:hover {

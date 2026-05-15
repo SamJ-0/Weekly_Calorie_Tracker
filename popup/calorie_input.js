@@ -2,6 +2,7 @@ const weeklyLabel = document.querySelector("#weeklyOverUnder dt");
 const weeklyValue = document.querySelector("#weeklyOverUnder dd");
 const dailyAvgValue = document.querySelector("#dailyAverage dd");
 const dateRangeDisplay = document.querySelector(".date-range");
+const tabs = document.querySelectorAll(".tabs");
 
 const saveBtn = document.querySelector("#save-btn");
 const input = document.querySelector("#calorie-input");
@@ -16,6 +17,32 @@ function submitOnEnterKey(e) {
     e.preventDefault();
     saveBtn.click();
   }
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", switchTab);
+});
+
+function switchTab(e) {
+  const activeTab = document.querySelectorAll(".active");
+  const currentTab = e.target.getAttribute("href");
+  const tabPanels = document.querySelectorAll(".tab-content");
+
+  const currentTabString = currentTab.slice(1);
+
+  activeTab.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+
+  e.target.classList.add("active");
+
+  tabPanels.forEach((panel) => {
+    if (currentTabString == panel.id) {
+      panel.classList.add("active-panel");
+    } else {
+      panel.classList.remove("active-panel");
+    }
+  });
 }
 
 const dailyGoal = 1700;
